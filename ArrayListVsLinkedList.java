@@ -8,21 +8,21 @@ public class ArrayListVsLinkedList {
 
         // ArrayList insertion in the middle
         List<Integer> arrayList = new ArrayList<>();
-        long startTime = System.nanoTime();
+        long startTime = System.currentTimeMillis();
         for (int i = 0; i < n; i++) {
             arrayList.add(arrayList.size() / 2, i);
         }
-        long arrayListDuration = System.nanoTime() - startTime;
-        System.out.println("ArrayList insertion time: " + arrayListDuration + " ns");
+        long arrayListDuration = System.currentTimeMillis() - startTime;
+        System.out.println("ArrayList insertion time: " + arrayListDuration + " ms");
 
         // LinkedList insertion in the middle
         List<Integer> linkedList = new LinkedList<>();
-        startTime = System.nanoTime();
+        startTime = System.currentTimeMillis();
         for (int i = 0; i < n; i++) {
             linkedList.add(linkedList.size() / 2, i);
         }
-        long linkedListDuration = System.nanoTime() - startTime;
-        System.out.println("LinkedList insertion time: " + linkedListDuration + " ns");
+        long linkedListDuration = System.currentTimeMillis() - startTime;
+        System.out.println("LinkedList insertion time: " + linkedListDuration + " ms");
     }
 }
 
